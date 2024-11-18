@@ -20,7 +20,8 @@
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint src --ext .js,.ts,.tsx,.jsx --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "codegen:api": "node scripts/codegen-api.js"
   },
   "lint-staged": {
     "src/**/*.{js,ts,tsx,jsx}": [

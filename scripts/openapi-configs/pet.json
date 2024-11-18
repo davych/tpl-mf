@@ -1,0 +1,12 @@
+{
+	"schemaFile": "https://petstore.swagger.io/v2/swagger.json",
+	"apiFile": "../../src/store/apis/base-api.ts",
+	"apiImport": "baseApi",
+	"outputFile": "../../src/store/apis/pet.ts",
+	"exportName": "petApi",
+	"hooks": {
+		"queries": true,
+		"lazyQueries": true,
+		"mutations": true
+	}
+}
