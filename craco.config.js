@@ -5,7 +5,7 @@ module.exports = {
     alias: {},
     configure: {
     output: {
-        publicPath: 'http://localhost:3000/', // 在这里设置，运行时资源的请求路径
+        publicPath: process.env.PUBLIC_PATH
       },
     },
     plugins: {
