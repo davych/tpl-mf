@@ -2,6 +2,7 @@ import React from 'react'
 import ProTable, { ProColumns } from '@ant-design/pro-table'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import { useFindPetsByStatusQuery } from '@/store/apis/pet'
 
 interface Dealer {
   id: number
@@ -18,6 +19,8 @@ const data: Dealer[] = [
 
 const Listing: React.FC = () => {
   const navigate = useNavigate()
+  const { data: pets, isLoading } = useFindPetsByStatusQuery({ status: ['available'] })
+  console.log(pets)
   const columns: ProColumns<Dealer>[] = [
     {
       title: 'ID',
@@ -61,6 +64,7 @@ const Listing: React.FC = () => {
     <ProTable<Dealer>
       columns={columns}
       dataSource={data}
+      loading={isLoading}
       rowKey="id"
       search={false}
       pagination={{
